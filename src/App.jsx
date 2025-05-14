@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { founderProfiles, quizData } from './data/quizData';
 import './App.css';
+import { Analytics } from "@vercel/analytics/react"
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -136,6 +137,7 @@ function App() {
           </div>
         </div>
       )}
+      <Analytics />
     </div>
   );
 }
