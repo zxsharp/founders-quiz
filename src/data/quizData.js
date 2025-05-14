@@ -34,30 +34,30 @@ export const quizData = [
         question: "What motivates you most when starting a new project?",
         name: "q1",
         options: [
-            { text: "Solving a massive global challenge that could reshape the future.", founders: ["EM", "SA"] },
-            { text: "Creating a product so beautiful and intuitive that users fall in love with it.", founders: ["SJ"] },
             { text: "Building a platform that connects millions and changes how they interact.", founders: ["MZ"] },
-            { text: "Finding a highly efficient, scalable solution to a widespread customer pain point.", founders: ["JB", "BG"] }
+            { text: "Finding a highly efficient, scalable solution to a widespread customer pain point.", founders: ["JB", "BG"] },
+            { text: "Solving a massive global challenge that could reshape the future.", founders: ["EM", "SA"] },
+            { text: "Creating a product so beautiful and intuitive that users fall in love with it.", founders: ["SJ"] }
         ]
     },
     {
         question: "When faced with a major setback, your first instinct is to:",
         name: "q2",
         options: [
-            { text: "Double down, work intensely, and push through with sheer force of will.", founders: ["EM"] },
-            { text: "Analyze data, understand what went wrong, and iterate quickly on a revised plan.", founders: ["MZ", "JB"] },
             { text: "Re-evaluate if the core vision is sound and if the user experience is compromised.", founders: ["SJ"] },
-            { text: "Consult experts, explore alternatives, and ensure long-term viability.", founders: ["BG", "SA", "GF"] }
+            { text: "Consult experts, explore alternatives, and ensure long-term viability.", founders: ["BG", "SA", "GF"] },
+            { text: "Analyze data, understand what went wrong, and iterate quickly on a revised plan.", founders: ["MZ", "JB"] },
+            { text: "Double down, work intensely, and push through with sheer force of will.", founders: ["EM"] }
         ]
     },
     {
         question: "Your ideal company culture is built around:",
         name: "q3",
         options: [
+            { text: "Intellectual curiosity, empowering smart people, and tackling complex technical problems.", founders: ["BG", "GF", "SA"] },
             { text: "A relentless pursuit of ambitious, world-changing goals, even if it means breaking things.", founders: ["EM"] },
-            { text: "A deep understanding of user needs and an obsession with crafting the perfect experience.", founders: ["SJ", "JB"] },
             { text: "Rapid experimentation, data analysis, and scaling proven successes.", founders: ["MZ"] },
-            { text: "Intellectual curiosity, empowering smart people, and tackling complex technical problems.", founders: ["BG", "GF", "SA"] }
+            { text: "A deep understanding of user needs and an obsession with crafting the perfect experience.", founders: ["SJ", "JB"] }
         ]
     },
     {
@@ -127,10 +127,10 @@ export const quizData = [
         question: "The ultimate purpose of technology is to:",
         name: "q10",
         options: [
+            { text: "Make information accessible and organize it for the benefit of all.", founders: ["GF"] },
+            { text: "Empower individuals and improve lives through innovative tools and platforms.", founders: ["BG", "SJ"] },
             { text: "Push the boundaries of human potential and secure our long-term survival.", founders: ["EM", "SA"] },
             { text: "Connect people and build communities on a global scale.", founders: ["MZ"] },
-            { text: "Empower individuals and improve lives through innovative tools and platforms.", founders: ["BG", "SJ"] },
-            { text: "Make information accessible and organize it for the benefit of all.", founders: ["GF"] },
             { text: "Serve customers with unparalleled convenience and value.", founders: ["JB"] }
         ]
     }

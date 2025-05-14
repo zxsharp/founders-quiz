@@ -2,7 +2,21 @@ import { useState } from 'react';
 import { founderProfiles, quizData } from './data/quizData';
 import './App.css';
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function App() {
+  const [questions, setQuestions] = useState(() => 
+    quizData.map(q => ({
+      ...q,
+      options: shuffleArray([...q.options])
+    }))
+  );
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
   const [error, setError] = useState(false);
@@ -19,7 +33,7 @@ function App() {
     let totalPointsAwarded = 0;
 
     Object.entries(answers).forEach(([questionName, optionIndex]) => {
-      const question = quizData.find(q => q.name === questionName);
+      const question = questions.find(q => q.name === questionName);
       const chosenOption = question.options[optionIndex];
       
       chosenOption.founders.forEach(founderKey => {
@@ -41,7 +55,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (Object.keys(answers).length < quizData.length) {
+    if (Object.keys(answers).length < questions.length) {
       setError(true);
       setShowResults(false);
       return;
@@ -60,7 +74,7 @@ function App() {
         <>
           <h1>Which Tech Founder's Mindset Matches Yours?</h1>
           <form onSubmit={handleSubmit}>
-            {quizData.map((question, index) => (
+            {questions.map((question, index) => (
               <div key={question.name} className="question-card">
                 <p className="question-text">{index + 1}. {question.question}</p>
                 {question.options.map((option, optIndex) => (
